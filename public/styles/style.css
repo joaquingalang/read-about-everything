@@ -119,6 +119,9 @@ nav a {
 }
 
 .blog-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin: 1rem 1rem;
     padding: 0;
 }
@@ -131,6 +134,14 @@ nav a {
 .blog-desc {
     margin: 0;
     font-weight: normal;
+}
+
+.more-icon div {
+    background-color: #333;
+    border-radius: 50%;
+    margin: 2px;
+    width: 5px;
+    height: 5px;
 }
 
 footer {
@@ -181,4 +192,26 @@ footer > * {
         max-height: 13rem;
     }
 
+}
+
+@media (max-width: 564px) {
+    .nav-options {
+        position: absolute;
+        top: 4rem;
+        right: 0;
+        background: #121212;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 100%;
+        padding: 0;
+        z-index: 100;
+    }
+    .nav-options a {
+        display: block;
+        padding: 1rem 2rem;
+        border-bottom: 1px solid #333;
+    }
+    .navbar {
+        position: relative;
+    }
 }
