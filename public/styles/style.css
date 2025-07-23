@@ -17,12 +17,42 @@ body {
 }
 
 .navbar * {
-    padding: 2rem;
+    padding: 0rem 2rem;
 }
 
-.navbar a {
+nav a {
     color: white;
     text-decoration: none;
+}
+
+.hamburger-btn {
+    padding: 0;
+    margin: 2rem;
+    background-color: #121212;
+    border: 1px solid white;
+    border-radius: 5px;
+    transition: background-color 500ms ease;
+}
+
+.hamburger-btn:hover {
+    background-color: gray;
+}
+
+.hamburger-icon {
+    margin: 0.5rem 0;
+    padding: 0rem 0.75rem;
+}
+
+.hamburger-icon div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    padding: 0;
+}
+
+.inactive {
+    display: none;
 }
 
 .hero .background {
@@ -30,7 +60,12 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     height: 50vh;
+    /* max-height: 50rem; */
     filter: brightness(0.7);
+}
+
+.hero-title {
+    user-select: none;
 }
 
 .content {
@@ -55,4 +90,95 @@ body {
 
 .blogs {
     margin: 4rem 5rem;
+}
+
+.grid-view {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.blog-post {
+    height: 17rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 10px #b3b3b3;
+    cursor: pointer;
+    transition: transform 250ms ease;
+}
+
+.blog-post:hover {
+    transform: scale(1.025);
+}
+
+.blog-thumbnail {
+    width: 100%;
+    max-height: 11rem;
+    object-fit: cover;
+    border-radius: 0.5rem 0.5rem 0rem 0rem;
+}
+
+.blog-content {
+    margin: 1rem 1rem;
+    padding: 0;
+}
+
+.blog-title {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.blog-desc {
+    margin: 0;
+    font-weight: normal;
+}
+
+footer {
+    height: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #121212;
+    color: white;
+}
+
+footer nav > * {
+    padding: 0rem 1.5rem;
+    font-weight: normal;
+}
+
+footer > * {
+    font-weight: normal;
+}
+
+@media (max-width: 550px) {
+    .grid-view {
+        display: block;
+    }
+
+    .blog-post {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (min-width: 551px) and (max-width: 951px) {
+    .grid-view {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1251px) {
+    .blogs {
+        margin: 4rem 15em;
+    }
+
+    .blog-post {
+        height: 19rem;
+    }
+
+    .blog-thumbnail {
+        max-height: 13rem;
+    }
+
 }
