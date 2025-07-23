@@ -24,4 +24,3 @@ async function renderHeroTitle() {
     $(".hero-title").text(fullTitle);
 }
 
-$(window).on("load", renderHeroTitle);
