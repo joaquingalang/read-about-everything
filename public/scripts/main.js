@@ -45,3 +45,7 @@ $(window).on("load", renderHeroTitle);
 $(window).on("load", updateNavbar);
 
 $(window).resize(updateNavbar);
+
+$(".hamburger-btn").on("click", function() {
+    $(".nav-options").toggleClass("inactive");
+});
