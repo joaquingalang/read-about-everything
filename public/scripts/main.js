@@ -24,3 +24,24 @@ async function renderHeroTitle() {
     $(".hero-title").text(fullTitle);
 }
 
+function updateNavbar() {
+    let windowWidth = $(window).width();
+    console.log(`Window Width: ${windowWidth}`);
+    console.log($(".nav-options"));
+    console.log($(".hamburger-btn"));
+
+    if (windowWidth < 564) {
+        $(".nav-options").addClass("inactive");
+        $(".hamburger-btn").removeClass("inactive");
+    } else {
+        $(".nav-options").removeClass("inactive");
+        $(".hamburger-btn").addClass("inactive");
+    }
+
+}
+
+$(window).on("load", renderHeroTitle);
+
+$(window).on("load", updateNavbar);
+
+$(window).resize(updateNavbar);
