@@ -30,79 +30,28 @@
             <!-- Grid view -->
              <div class="grid-view">
 
-                <div class="blog-post">
-                    <img class="blog-thumbnail" src="https://www.w3schools.com/css/paris.jpg" alt="Blog Thumbnail">
-                    <div class="blog-content">
-                        <div>
-                            <p class="blog-title">Title</p>
-                            <p class="blog-desc">Description</p>
-                        </div>
-                        <div class="more-icon">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                    </div>
-                </div>
+                <% for (let i = 0; i < posts.length; i++) { %>
+                    <% let currentPost = posts[i]; %>
 
-                <div class="blog-post">
-                    <img class="blog-thumbnail" src="https://www.w3schools.com/css/paris.jpg" alt="Blog Thumbnail">
-                    <div class="blog-content">
-                        <div>
-                            <p class="blog-title">Title</p>
-                            <p class="blog-desc">Description</p>
-                        </div>
-                        <div class="more-icon">
-                            <div></div>
-                            <div></div>
-                            <div></div>
+                    <div class="blog-post">
+                        <img class="blog-thumbnail" src=<%= currentPost.imageUrl %> alt="Blog Thumbnail">
+                        <div class="blog-content">
+                            <div>
+                                <p class="blog-title"><%= currentPost.title %></p>
+                                <p class="blog-desc"><%= currentPost.getShortBody() %></p>
+                            </div>
+                            <div class="more-icon">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="blog-post">
-                    <img class="blog-thumbnail" src="https://www.w3schools.com/css/paris.jpg" alt="Blog Thumbnail">
-                    <div class="blog-content">
-                        <div>
-                            <p class="blog-title">Title</p>
-                            <p class="blog-desc">Description</p>
-                        </div>
-                        <div class="more-icon">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                    </div>
-                </div>
+                <% } %>
 
-                <div class="blog-post">
-                    <img class="blog-thumbnail" src="https://www.w3schools.com/css/paris.jpg" alt="Blog Thumbnail">
-                    <div class="blog-content">
-                        <div>
-                            <p class="blog-title">Title</p>
-                            <p class="blog-desc">Description</p>
-                        </div>
-                        <div class="more-icon">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="blog-post">
-                    <img class="blog-thumbnail" src="https://www.w3schools.com/css/paris.jpg" alt="Blog Thumbnail">
-                    <div class="blog-content">
-                        <div>
-                            <p class="blog-title">Title</p>
-                            <p class="blog-desc">Description</p>
-                        </div>
-                        <div class="more-icon">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                    </div>
+                <div class="blog-post add">
+                    <img src="https://static.thenounproject.com/png/65474-200.png" alt="add button">
                 </div>
 
              </div>

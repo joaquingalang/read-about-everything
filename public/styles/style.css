@@ -111,6 +111,26 @@ nav a {
     transform: scale(1.025);
 }
 
+.add {
+    background-color: #E3E3E3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.add img {
+    width: 7rem;
+    filter: contrast(0);
+}
+
+.add p {
+    margin: 0;
+    color: #848484;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
 .blog-thumbnail {
     width: 100%;
     max-height: 11rem;
@@ -134,6 +154,22 @@ nav a {
 .blog-desc {
     margin: 0;
     font-weight: normal;
+}
+
+.more-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 250ms ease-in;
+}
+
+.more-icon:hover {
+    background-color: #F0F0F0;
 }
 
 .more-icon div {
@@ -185,6 +221,10 @@ footer > * {
     }
 
     .blog-post {
+        height: 19rem;
+    }
+
+    .blog-post .add {
         height: 19rem;
     }
 
