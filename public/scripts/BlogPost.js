@@ -1,23 +1,25 @@
 class BlogPost {
     constructor(title, body, author, imageUrl) {
         this.title = title;
-        this.body = body;
+        this.content = body;
         this.author = author;
         this.imageUrl = imageUrl;
         this.updateDate();
-        this.getShortBody();
     }
 
-    getShortBody() {
-        return this.body.substring(0, 32) + "...";
+    getShortTitle() {
+        if (this.title.length < 18) {
+            return this.title;
+        }
+        return this.title.substring(0, 18) + "...";
     }
 
     updateTitle(newTitle) {
         this.title = newTitle;
     }
 
-    updateBody(newBody) {
-        this.body = newBody;
+    updateBody(newContent) {
+        this.content = newContent;
     }
 
     updateAuthor(newAuthor) {
