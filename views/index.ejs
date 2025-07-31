@@ -37,8 +37,8 @@
                         <img class="blog-thumbnail" src=<%= currentPost.imageUrl %> alt="Blog Thumbnail">
                         <div class="blog-content">
                             <div>
-                                <p class="blog-title"><%= currentPost.title %></p>
-                                <p class="blog-desc"><%= currentPost.getShortBody() %></p>
+                                <p class="blog-title"><%= currentPost.getShortTitle() %></p>
+                                <p class="blog-desc">By <%= currentPost.author %></p>
                             </div>
                             <div class="more-icon">
                                 <div></div>
@@ -50,26 +50,21 @@
 
                 <% } %>
 
-                <div class="blog-post add">
-                    <img src="https://static.thenounproject.com/png/65474-200.png" alt="add button">
-                </div>
+                <a href="/create">
+                    <div class="blog-post add">
+                        <img src="https://static.thenounproject.com/png/65474-200.png" alt="add button">
+                    </div>
+                </a>
 
              </div>
              
         </div>
     </section>
 
-    <footer>
-        <nav>
-            <a href="#">Home</a>
-            <a  href="#">About</a>
-            <a  href="#">Contact</a>
-        </nav>
-        <p>&copy; 2025 by Joaquin Galang. All rights reserved.</p>
-    </footer>
+    <%- include("partials/footer.ejs") %>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="./scripts/main.js"></script>
+    <script src="./scripts/index.js"></script>
     
 </body>
 </html>
