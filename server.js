@@ -9,12 +9,11 @@ const port = 3000;
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
+app.use(express.urlencoded());
+
 var blogPosts = [
     
 ];
-
-createPost();
-createPost();
 
 function createPost() {
     let newPost = new BlogPost(
@@ -36,8 +35,20 @@ app.get("/", (req, res) => {
     res.render("index.ejs", data);
 });
 
-app.post("/blog", (req, res) => {
+app.get("/create", (req, res) => {
+    res.render("create.ejs");
+});
 
+app.post("/add", (req, res) => {
+    const newPost = new BlogPost(
+        req.body.title,
+        req.body.content,
+        req.body.author,
+        req.body.thumbnail,
+    );
+    blogPosts.push(newPost);
+    console.log(newPost);
+    res.redirect("/");
 });
 
 app.listen(port, () => {
