@@ -9,9 +9,11 @@ body {
 
 .navbar {
     height: 4rem;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: block;
     background-color: #121212;
     color: white;
 }
@@ -124,13 +126,6 @@ nav a {
     filter: contrast(0);
 }
 
-.add p {
-    margin: 0;
-    color: #848484;
-    font-size: 1.2rem;
-    font-weight: 400;
-}
-
 .blog-thumbnail {
     width: 100%;
     max-height: 11rem;
@@ -181,6 +176,10 @@ nav a {
 }
 
 footer {
+    display: block;
+}
+
+.footer-content {
     height: 8rem;
     display: flex;
     flex-direction: column;
@@ -190,14 +189,103 @@ footer {
     color: white;
 }
 
-footer nav > * {
+.footer-content nav > * {
     padding: 0rem 1.5rem;
     font-weight: normal;
 }
 
-footer > * {
+.footer-content > * {
     font-weight: normal;
 }
+
+.create-form {
+    margin: 2rem 5rem;
+    /* height: 80vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.create-form h1 {
+    margin: 0;
+}
+
+.create-form form {
+    width: 100%;
+}
+
+.form-field {
+    margin: 1rem 0;
+}
+
+.thumbnail-preview {
+    width: 99.5%;
+    height: 15rem;
+    object-fit: cover;
+    /* border: 2px solid #121212; */
+    border-radius: 5px;
+}
+
+.create-form label {
+    display: block;
+    font-weight: 100;
+    margin-bottom: 5px;
+}
+
+.create-form input, textarea {
+    border: 2px solid #121212;
+    border-radius: 5px;
+    padding: 0.5rem;
+}
+
+input[name="thumbnail"] {
+    width: 98%;
+    font-size: 1rem;
+    font-family: "Ubuntu", sans-serif;
+}
+
+input[name="title"] {
+    width: 98%;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+textarea[name="content"] {
+    min-width: 98%;
+    height: 10rem;
+    font-size: 1rem;
+    font-family: "Ubuntu", sans-serif;
+}
+
+input[name="author"] {
+    font-size: 1rem;
+}
+
+input[type="submit"] {
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    background-color: #121212;
+    padding: 0.5rem 2rem;
+    margin-top: 1rem;
+    height: 3rem;
+    cursor: pointer;
+    transition: background-color 100ms ease-in;
+}
+
+input[type="submit"]:hover {
+    background-color: #3F3F3F;
+}
+
+.last-field {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* .create-form input[type="submit"] {
+    border: none;
+} */
 
 @media (max-width: 550px) {
     .grid-view {
@@ -232,6 +320,10 @@ footer > * {
         max-height: 13rem;
     }
 
+    .create-form {
+        margin: 2rem 15rem;
+    }
+
 }
 
 @media (max-width: 564px) {
@@ -251,7 +343,5 @@ footer > * {
         padding: 1rem 2rem;
         border-bottom: 1px solid #333;
     }
-    .navbar {
-        position: relative;
-    }
+
 }
